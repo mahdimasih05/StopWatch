@@ -3,8 +3,74 @@
   <head>
     <title>StopWatch</title>
     <link rel="stylesheet" href="stw.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
+    <div class="text-center">
+      <h1
+        style="font-family: 'Gemunu Libre', sans-serif"
+        id="header"
+        class="header"
+      ></h1>
+
+      <div style="font-family: 'Orbitron', sans-serif" class="clock">
+        <div class="columns">
+          <span id="field1">00</span>
+          <span>:</span>
+        </div>
+        <div class="columns">
+          <span id="field2" style="font-size: 40px">00</span>
+        </div>
+        <div class="columns">
+          <span>:</span>
+          <span id="field3">00</span>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button
+          type="button"
+          class="btn btn-light button"
+          style="font-size: 18px; font-weight: bold"
+          id="startfield"
+          onclick="timer = setInterval(add, 10);"
+        >
+          Start
+        </button>
+        <button
+          type="button"
+          class="btn btn-light button"
+          style="font-size: 18px; font-weight: bold"
+          onclick="stop()"
+        >
+          Stop
+        </button>
+        <button
+          type="button"
+          class="btn btn-light button"
+          style="font-size: 18px; font-weight: bold"
+          onclick="reset()"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
     <script type="text/javascript" src="stw.js"></script>
   </body>
 </html>
