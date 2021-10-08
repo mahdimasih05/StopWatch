@@ -21,8 +21,13 @@ var min = 0;
 var field3 = document.getElementById("field3");
 var field2 = document.getElementById("field2");
 var field1 = document.getElementById("field1");
-
+var startbut = document.getElementById("startbut");
+var stopbut = document.getElementById("stopbut");
+var resetbut = document.getElementById("resetbut");
 function add() {
+  startbut.disabled = true;
+  stopbut.disabled = false;
+  resetbut.disabled = true;
   cSec += 1;
   field3.innerHTML = cSec;
   if (cSec < 10) {
@@ -50,7 +55,9 @@ function add() {
   }
 }
 function stop() {
-  document.getElementById("startfield").innerHTML = "Restart";
+  startbut.innerHTML = "Restart";
+  startbut.disabled = false;
+  resetbut.disabled = false;
   clearInterval(timer);
 }
 
@@ -61,4 +68,7 @@ function reset() {
   field1.innerHTML = min + "0";
   field2.innerHTML = Sec + "0";
   field3.innerHTML = cSec + "0";
+  startbut.innerHTML = "Start";
+  resetbut.disabled = true;
+  stopbut.disabled = true;
 }

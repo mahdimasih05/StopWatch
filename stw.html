@@ -48,7 +48,7 @@
           type="button"
           class="btn btn-light button"
           style="font-size: 18px; font-weight: bold"
-          id="startfield"
+          id="startbut"
           onclick="timer = setInterval(add, 10);"
         >
           Start
@@ -57,7 +57,9 @@
           type="button"
           class="btn btn-light button"
           style="font-size: 18px; font-weight: bold"
+          id="stopbut"
           onclick="stop()"
+          disabled
         >
           Stop
         </button>
@@ -65,7 +67,9 @@
           type="button"
           class="btn btn-light button"
           style="font-size: 18px; font-weight: bold"
+          id="resetbut"
           onclick="reset()"
+          disabled
         >
           Reset
         </button>
