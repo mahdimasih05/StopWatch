@@ -45,9 +45,9 @@ function add() {
     cSec = 0;
     Sec += 1;
     field2.innerHTML = Sec;
-    start();
   }
-  if (Sec > 59) {
+
+  if (Sec > 60) {
     Sec = 0;
     field2.innerHTML = "00";
     min += 1;
