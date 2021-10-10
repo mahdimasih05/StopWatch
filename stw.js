@@ -24,10 +24,12 @@ var field1 = document.getElementById("field1");
 var startbut = document.getElementById("startbut");
 var stopbut = document.getElementById("stopbut");
 var resetbut = document.getElementById("resetbut");
+var lapbut = document.getElementById("lapbut");
 function add() {
   startbut.disabled = true;
   stopbut.disabled = false;
   resetbut.disabled = true;
+  lapbut.disabled = false;
   cSec += 1;
   field3.innerHTML = cSec;
   if (cSec < 10) {
@@ -57,6 +59,8 @@ function add() {
 function stop() {
   startbut.innerHTML = "Restart";
   startbut.disabled = false;
+  stopbut.disabled = true;
+  lapbut.disabled = true;
   resetbut.disabled = false;
   clearInterval(timer);
 }
@@ -71,4 +75,26 @@ function reset() {
   startbut.innerHTML = "Start";
   resetbut.disabled = true;
   stopbut.disabled = true;
+  laps = [];
+  lapfield.innerHTML = "";
+  lapbut.disabled = true;
+  lapfield.style.display = "none";
+}
+
+var laps = [];
+var lapnum = laps.length;
+var lapfield = document.getElementById("laplist");
+function lap() {
+  var lapnum = laps.length + 1;
+  laps.push(
+    lapnum +
+      ". " +
+      field1.innerText +
+      ":" +
+      field2.innerText +
+      ":" +
+      field3.innerText,
+  );
+  lapfield.style.display = "inline-block";
+  lapfield.textContent = laps.join("\n");
 }

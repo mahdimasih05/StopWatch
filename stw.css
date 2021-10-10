@@ -2,7 +2,7 @@ body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 @keyframes gradient {
@@ -69,4 +69,27 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+#startbut {
+  width: 240px;
+}
+
+#stopbut,
+#resetbut,
+#lapbut {
+  width: 70px;
+  margin-top: 10px;
+}
+
+#laplist {
+  font-family: "Gemunu Libre";
+  display: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid white;
+  margin-top: 20px;
+  width: 180px;
+  padding: 10px 40px;
 }

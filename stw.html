@@ -46,7 +46,7 @@
       <div class="buttons">
         <button
           type="button"
-          class="btn btn-light button"
+          class="btn btn-light button d-block mx-auto"
           style="font-size: 18px; font-weight: bold"
           id="startbut"
           onclick="timer = setInterval(add, 10);"
@@ -73,7 +73,19 @@
         >
           Reset
         </button>
+
+        <button
+          type="button"
+          class="btn btn-light button"
+          style="font-size: 18px; font-weight: bold"
+          id="lapbut"
+          onclick="lap()"
+          disabled
+        >
+          Lap
+        </button>
       </div>
+      <p id="laplist"></p>
     </div>
     <script type="text/javascript" src="stw.js"></script>
   </body>
